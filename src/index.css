@@ -1,1 +1,110 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Science+Gothic:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'tailwindcss';
+
+@font-face {
+  font-family: cartage;
+  src: url("../src/assets/fonts/cartagestenciljnl.ttf");
+}
+
+@theme {
+  /* --color-burgundy-800: #491218; */
+  /* --color-burgundy-800: #620031; */
+
+  --font-poppins: poppins, 'sans serif';
+  --font-lato: lato, 'sans serif';
+  --font-ano: 'Anonymous Pro', monospace;
+  --font-space: 'Space Grotesk', monospace;
+  --font-cartage: cartage, monospace;
+
+  /* --color-burgundy-800: #800020;
+  --color-gold: #e0c97e;
+
+  --color-primary: #FFA800;
+  --color-secondary: #e0c97e;
+  --color-accent: #EFBF04;
+  --color-accent: #FFBF00;
+  --color-accent: #FFA800; */
+  --color-matt: #1b1212;
+  /* --color-matt : #000000; */
+
+  --color-primary-500: #7a1e26;
+  --color-primary-400: #893639;
+  --color-accent-400: #ffa800;
+  --color-accent-500: #ffa800;
+
+  --color-primary: #09090a;
+  --color-gold-400: #ffd700;
+  --color-gold-500: #ffbf00;
+  --color-gold-600 : #E6BD37;
+  --color-gold-700 : #D3AF37;
+}
+
+body {
+  background-color: black;
+}
+
+/* 
+ * Add custom classes using @layer utilities
+ * ----------------------------------------
+ */
+@layer utilities {
+  .wrapper {
+    max-width: 1800px;
+    margin-inline: auto;
+    padding-inline: 20px;
+  }
+  .path {
+    /* clip-path: path('M 10,40 L 70,40 L 80,30 Z'); */
+    /* clip-path: path(
+      'M 0,10 L 10,0 L 350,0 L 375,25 L 400,50 L 490,50 L 500,60 L 500,300 L 100,300  Z'
+    ); */
+
+    /* clip-path: path('M 0,3% L 3%,0 Z');
+    clip-path: path('M 0,3% L 3%,0 L 80%,0 Z');
+    clip-path: polygon(0% 4%, 4% 0%, 72% 0%, 76% 4%, 80% 8%, 100% 8%,
+    100% 100%, 28% 100%, 24% 96%, 20% 92%, 0% 92%
+    ); */
+    /* clip-path: polygon(
+      0% 5%,
+      5% 0%,
+      70% 0%,
+      75% 5%,
+      80% 10%,
+      95% 10%,
+      100% 15%,
+      100% 95%,
+      95% 100%,
+      30% 100%,
+      25% 95%,
+      20% 90%,
+      5% 90%,
+      0% 85%
+    ); */
+
+    clip-path: path(
+      'M 0% 5% L 5% 0% L 70% 0% L 75% 5% L 80% 10% L 95% 10% L 100% 15% L 100% 95% L 95% 100% L 30% 100% L 25% 95% L 20% 90% L 5% 90% L 0% 85% Z'
+    );
+
+    clip-path: path(
+      'M 0 50 L 50 0 L 700 0 L 750 50 L 800 100 L 950 100 L 1000 150 L 1000 950 L 950 1000 L 300 1000 L 250 950 L 200 900 L 50 900 L 0 850 Z'
+    );
+    clip-path: path(
+      'M0 50 Q25 0 50 0 L700 0 Q735 0 750 50 Q770 80 800 100 L950 100 Q1000 100 1000 150 L1000 950 Q1000 1000 950 1000 L300 1000 Q265 1000 250 950 Q230 920 200 900 L50 900 Q0 900 0 850 Z'
+    );
+
+    clip-path: path(
+      'M957.822 50.5H785.855C763.218 50.5 741.507 41.5072 725.5 25.5C709.493 9.49277 687.782 0.5 665.145 0.5H43.1777C31.8589 0.5 21.0036 4.99638 13 13C4.99638 21.0036 0.5 31.8588 0.5 43.1777V657.822C0.5 669.141 4.99638 679.996 13 688C21.0036 696.004 31.8589 700.5 43.1777 700.5H215.145C237.782 700.5 259.493 709.493 275.5 725.5C291.507 741.507 313.218 750.5 335.855 750.5H957.822C969.141 750.5 979.996 746.004 988 738C996.004 729.996 1000.5 719.141 1000.5 707.822V93.1777C1000.5 81.8588 996.004 71.0036 988 63C979.996 54.9964 969.141 50.5 957.822 50.5Z'
+    );
+    /* clip-path: url(#roundedShape); */
+    clip-path: path(
+      'M957.822 50.5H753.451C736.321 50.5 720.661 40.8217 713 25.5C705.339 10.1783 689.679 0.5 672.549 0.5H43.1777C31.8589 0.5 21.0036 4.99638 13 13C4.99638 21.0036 0.5 31.8588 0.5 43.1777V657.822C0.5 669.141 4.99638 679.996 13 688C21.0036 696.004 31.8589 700.5 43.1777 700.5H247.549C264.679 700.5 280.339 710.178 288 725.5C295.661 740.822 311.321 750.5 328.451 750.5H957.822C969.141 750.5 979.996 746.004 988 738C996.004 729.996 1000.5 719.141 1000.5 707.822V93.1777C1000.5 81.8588 996.004 71.0036 988 63C979.996 54.9964 969.141 50.5 957.822 50.5Z'
+    );
+  }
+
+  .pathing {
+    /* clip-path: path("M 0 25 L 25 0 L 700 0 L 725 25 L 750 50 L 975 50 L 1000 75 L 1000 725 L 975 750 L 300 750 L 275 725 L 250 700 L 25 700 L 0 675 Z"); */
+    /* clip-path: path("M0 25 A20 20 0 0 1 25 0 L700 0 A20 20 0 0 1 725 25 A20 20 0 0 0 750 50 L975 50 A20 20 0 0 1 1000 75 L1000 725 A20 20 0 0 1 975 750 L300 750 A20 20 0 0 1 275 725 A20 20 0 0 0 250 700 L25 700 A20 20 0 0 1 0 675 Z"); */
+    clip-path: url(#yourClip);
+  }
+}

@@ -1,0 +1,13 @@
+import React from 'react';
+import Hero from './Sections/Hero';
+
+
+function Homepage() {
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
+}
+
+export default Homepage;

@@ -1,9 +1,16 @@
-import React from 'react'
+import { Routes, Route } from 'react-router';
+import Header from './components/Header';
+import Homepage from './pages/Homepage/Homepage';
 
 function App() {
   return (
-    <div>App</div>
-  )
+    <div className="relative bg-black w-full min-h-[2000px] font-space">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;
