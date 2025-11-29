@@ -16,16 +16,16 @@ function MainMenu({ menuActive, handleActiveChange }) {
 
   return (
     <div
-      className={`w-full h-screen absolute  ${
+      className={`w-full h-dvh absolute  ${
         menuActive ? 'top-0' : '-top-[650px] -translate-y-[50%]'
-      } transition-all duration-500 ease-out left-0 z-20 bg-primary overflow-hidden  flex flex-col items-stretch justify-between`}
+      } transition-all duration-500 ease-out left-0 z-20 bg-primary flex flex-col`}
     >
-      <div className="">
-        <div className="px-6 pt-6 flex justify-between items-center w-full">
-          <img className="w-auto h-10" src={logo_cropped} alt="" />
-          <IoClose onClick={handleActiveChange} className="text-white text-3xl cursor-pointer" />
-        </div>
-        <MenuActions />
+      <div className="px-6 pt-6 flex justify-between items-center w-full">
+        <img className="w-auto h-10" src={logo_cropped} alt="" />
+        <IoClose onClick={handleActiveChange} className="text-white text-3xl cursor-pointer" />
+      </div>
+      <MenuActions />
+      <div className="flex-1 overflow-y-auto">
         <MenuNavigations />
 
         {/* // TODO This was the old navigations with big font size */}
@@ -39,9 +39,11 @@ function MainMenu({ menuActive, handleActiveChange }) {
               })}
             </nav> */}
       </div>
-      <button className="bg-accent-300 py-4 uppercase rounded-lg font-bold text-white text-lg cursor-pointer">
-        Get in Touch
-      </button>
+      <div className="w-full px-6 py-2 ">
+        <button className="bg-accent-300 w-full py-4 uppercase rounded-lg font-bold text-white text-lg cursor-pointer">
+          Get in Touch
+        </button>
+      </div>
     </div>
   );
 }

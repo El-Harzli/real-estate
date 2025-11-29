@@ -16,7 +16,7 @@ function MenuNavigations() {
     setActiveFIlter(value);
   };
   return (
-    <nav className="w-full mt-6 flex flex-col gap-y-1">
+    <nav className="w-full py-2 flex flex-col gap-y-1 overflow-y-auto">
       {/* {navlinks.map((link) => {
                 return <MenuItem handleItemClick={handleItemClick} key={link} label={link} />;
               })} */}

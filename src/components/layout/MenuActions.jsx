@@ -33,7 +33,7 @@ function MenuActions() {
   return (
     <div
       ref={languageParentContainerRef}
-      className="relative mt-6 px-6  w-full flex items-center justify-stretch flex-nowrap gap-1"
+      className="relative mt-3 px-6 py-3  w-full flex items-center justify-stretch flex-nowrap gap-1"
     >
       <MenuActionCard Icon={FiHome} label="Home" />
       <MenuActionCard Icon={LuContact} label="Contact Us" />
