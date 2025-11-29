@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { FiHome } from 'react-icons/fi';
 import { LuContact } from 'react-icons/lu';
 import { GrLanguage } from 'react-icons/gr';

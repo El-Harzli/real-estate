@@ -8,6 +8,7 @@ import MenuNavigations from '@layout/MenuNavigations';
 function MainMenu({ menuActive, handleActiveChange }) {
   const menuHeaderRef = useRef();
   const [headerHeight, setHeaderHeight] = useState(0);
+
   useEffect(() => {
     if (menuHeaderRef.current) {
       setHeaderHeight(menuHeaderRef.current.offsetHeight);
@@ -15,11 +16,7 @@ function MainMenu({ menuActive, handleActiveChange }) {
   }, []);
 
   useEffect(() => {
-    if (menuActive) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'visible';
-    }
+    document.body.style.overflow = menuActive ? 'hidden' : 'visible';
   }, [menuActive]);
 
   return (
@@ -35,9 +32,8 @@ function MainMenu({ menuActive, handleActiveChange }) {
         <IoClose onClick={handleActiveChange} className="text-white text-3xl cursor-pointer" />
       </div>
       <MenuActions headerHeight={headerHeight} />
-      <div className="flex-1 overflow-y-auto">
-        <MenuNavigations />
-      </div>
+      <MenuNavigations />
+
       {/* // TODO This was the old navigations with big font size */}
       {/* <nav className="flex flex-col gap-y-2 mt-[20%] font-semibold text-white text-5xl">
               {navlinks.map((link) => {
