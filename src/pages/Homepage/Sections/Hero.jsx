@@ -1,12 +1,13 @@
 import React from 'react';
 import hero_img from '@assets/hero_img.png';
 
-import Badges from '@components/Badges';
+import Badges from '@cards/Badges';
 
 import { FiHome } from 'react-icons/fi';
 import { HiOutlineEmojiHappy } from 'react-icons/hi';
 import { TfiMedallAlt } from 'react-icons/tfi';
 import { useEffect } from 'react';
+import Button from '@components/shared/Button';
 
 function Hero() {
   const handleScroll = () => {};
@@ -32,10 +33,11 @@ function Hero() {
           Luxury real estate and curated <br />
           rentals in the heart of Tangier.
         </p>
-        <button className="bg-gold-500 hover:bg-gold-400 px-5 py-2 border border-gold rounded-2xl font-semibold text-primary text-lg transition-all duration-300 cursor-pointer">
+        {/* <button className="bg-gold-500 hover:bg-gold-400 px-5 py-2 border border-gold rounded-2xl font-semibold text-primary text-lg transition-all duration-300 cursor-pointer">
           Browse Properties
-        </button>
-        <div className="flex flex-nowrap justify-start items-center gap-x-3 gap-y-3 mt-14">
+        </button> */}
+        <Button label="Browse Properties" />
+        <div className="flex flex-wrap justify-center items-center gap-x-2 gap-y-3 mt-14">
           <Badges Icon={FiHome} label="Properties" count={200} />
           <Badges Icon={HiOutlineEmojiHappy} label="Happy Client" count={500} />
           <Badges Icon={TfiMedallAlt} label="Years Experience" count={10} />

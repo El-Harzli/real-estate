@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: cartage;
-  src: url("../src/assets/fonts/cartagestenciljnl.ttf");
+  src: url('../src/assets/fonts/cartagestenciljnl.ttf');
 }
 
 @theme {
@@ -30,14 +30,21 @@
 
   --color-primary-500: #7a1e26;
   --color-primary-400: #893639;
-  --color-accent-400: #ffa800;
-  --color-accent-500: #ffa800;
+  --color-accent-50: #e77373;
+  --color-accent-100: #e14c4c;
+  --color-accent-200: #da2525;
+  --color-accent-300: #b31e1e;
+  --color-accent-400: #8c1818;
+  --color-accent-500: #5e1010;
 
   --color-primary: #09090a;
   --color-gold-400: #ffd700;
   --color-gold-500: #ffbf00;
-  --color-gold-600 : #E6BD37;
-  --color-gold-700 : #D3AF37;
+  --color-gold-600: #e6bd37;
+  --color-gold-700: #d3af37;
+
+  --color-burgundy: #5e1010;
+  --color-beige: #ffeccc;
 }
 
 body {

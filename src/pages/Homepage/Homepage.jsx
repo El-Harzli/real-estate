@@ -1,6 +1,4 @@
-import React from 'react';
 import Hero from './Sections/Hero';
-
 
 function Homepage() {
   return (
