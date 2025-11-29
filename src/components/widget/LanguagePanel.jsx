@@ -13,7 +13,7 @@ function LanguagePanel({ languageModelActive, setLanguageModelActive, headerHeig
   };
   return (
     <div
-      className={`bg-black p-6 w-full absolute right-0 transition duration-500 ease-in-out ${
+      className={`bg-black p-6 w-full absolute right-0 transition duration-500 ease-in-out z-10 ${
         languageModelActive ? 'translate-x-0' : '-translate-x-full'
       }`}
       style={{

@@ -17,7 +17,7 @@ const navigations = [
   },
   {
     label: 'Experiences',
-    children: ['1 hour quadr', 'Touristic', 'Personal Driver', 'Loisir'],
+    children: ['1 hour quadr', 'Touristic', 'Personal Driver', 'private yacht tour'],
   },
 ];
 
