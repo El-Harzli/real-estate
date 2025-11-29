@@ -4,7 +4,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import MainMenu from '@widget/MainMenu';
 
 function Header() {
-  const [menuActive, setMenuActive] = useState(true);
+  const [menuActive, setMenuActive] = useState(false);
 
   const handleActiveChange = () => {
     setMenuActive((prev) => !prev);

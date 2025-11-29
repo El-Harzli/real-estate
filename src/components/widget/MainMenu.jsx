@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { IoClose } from 'react-icons/io5';
 import logo_cropped from '@assets/logo_nt.png';
 
@@ -6,6 +6,14 @@ import MenuActions from '@layout/MenuActions';
 import MenuNavigations from '@layout/MenuNavigations';
 
 function MainMenu({ menuActive, handleActiveChange }) {
+  const menuHeaderRef = useRef();
+  const [headerHeight, setHeaderHeight] = useState(0);
+  useEffect(() => {
+    if (menuHeaderRef.current) {
+      setHeaderHeight(menuHeaderRef.current.offsetHeight);
+    }
+  }, []);
+
   useEffect(() => {
     if (menuActive) {
       document.body.style.overflow = 'hidden';
@@ -15,21 +23,23 @@ function MainMenu({ menuActive, handleActiveChange }) {
   }, [menuActive]);
 
   return (
+    // TODO change the fixed -top position and make it dynamic using ref
+    // TODO DONE
     <div
       className={`w-full h-dvh absolute  ${
-        menuActive ? 'top-0' : '-top-[650px] -translate-y-[50%]'
+        menuActive ? 'top-0' : '-top-[100dvh] '
       } transition-all duration-500 ease-out left-0 z-20 bg-primary flex flex-col`}
     >
-      <div className="px-6 pt-6 flex justify-between items-center w-full">
+      <div ref={menuHeaderRef} className="p-6 flex justify-between items-center w-full">
         <img className="w-auto h-10" src={logo_cropped} alt="" />
         <IoClose onClick={handleActiveChange} className="text-white text-3xl cursor-pointer" />
       </div>
-      <MenuActions />
+      <MenuActions headerHeight={headerHeight} />
       <div className="flex-1 overflow-y-auto">
         <MenuNavigations />
-
-        {/* // TODO This was the old navigations with big font size */}
-        {/* <nav className="flex flex-col gap-y-2 mt-[20%] font-semibold text-white text-5xl">
+      </div>
+      {/* // TODO This was the old navigations with big font size */}
+      {/* <nav className="flex flex-col gap-y-2 mt-[20%] font-semibold text-white text-5xl">
               {navlinks.map((link) => {
                 return (
                   <Link key={link} className="uppercase">
@@ -38,9 +48,9 @@ function MainMenu({ menuActive, handleActiveChange }) {
                 );
               })}
             </nav> */}
-      </div>
-      <div className="w-full px-6 py-2 ">
-        <button className="bg-accent-300 w-full py-4 uppercase rounded-lg font-bold text-white text-lg cursor-pointer">
+
+      <div className="w-full px-6 py-3 ">
+        <button className="bg-accent-300 w-full py-4 uppercase rounded-md font-bold text-white text-lg cursor-pointer">
           Get in Touch
         </button>
       </div>
