@@ -23,7 +23,7 @@ function MainMenu({ menuActive, handleActiveChange }) {
     // TODO change the fixed -top position and make it dynamic using ref
     // TODO DONE
     <div
-      className={`w-full h-dvh absolute  ${
+      className={`w-full h-dvh fixed  ${
         menuActive ? 'top-0' : '-top-[100dvh] '
       } transition-all duration-500 ease-out left-0 z-20 bg-primary flex flex-col`}
     >
@@ -46,7 +46,10 @@ function MainMenu({ menuActive, handleActiveChange }) {
             </nav> */}
 
       <div className="w-full px-6 py-3 ">
-        <button className="bg-accent-300 w-full py-4 uppercase rounded-md font-bold text-white text-lg cursor-pointer">
+        {/* <button className="bg-accent-300 w-full py-4 uppercase rounded-md font-bold text-white text-lg cursor-pointer">
+          Get in Touch
+        </button> */}
+        <button className="bg-[#6A2c2E] text-[#F0E5D8] w-full py-4 uppercase rounded-md font-bold  text-lg cursor-pointer">
           Get in Touch
         </button>
       </div>

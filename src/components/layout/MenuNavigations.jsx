@@ -17,7 +17,7 @@ const navigations = [
   },
   {
     label: 'Experiences',
-    children: ['1 hour quadr', 'Touristic', 'Personal Driver', 'private yacht tour'],
+    children: ['1 hour quadr', 'Touristic', 'Personal Driver', 'Private Yacht Tour', 'Golf'],
   },
 ];
 
@@ -57,7 +57,7 @@ function MenuNavigations() {
             onClick={() => {
               setActiveFilter(null);
             }}
-            className="text-white flex items-center justify-start gap-1 cursor-pointer"
+            className="text-white flex items-center justify-start gap-1 cursor-pointer py-3 px-3"
           >
             <FaChevronLeft className="text-sm" />
             <span className="font-light ">Back</span>

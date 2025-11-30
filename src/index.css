@@ -36,6 +36,9 @@
   --color-accent-300: #b31e1e;
   --color-accent-400: #8c1818;
   --color-accent-500: #5e1010;
+  --color-secondary: #B81F1F;
+  --color-mrx: #F0E5D8;
+
 
   --color-primary: #09090a;
   --color-gold-400: #ffd700;
@@ -48,7 +51,7 @@
 }
 
 body {
-  background-color: black;
+  /* background-color: black; */
 }
 
 /* 
